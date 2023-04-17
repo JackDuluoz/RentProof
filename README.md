@@ -1,6 +1,6 @@
 ## RentProof
 
-RentProof is An app to track and analyze rental prices. Users can submit info about their rent costs, and the app tracks this data, graphing out rental increases over the years, and showing how each property's price fluctuations compare to the rest of the market.
+RentProof tracks and analyses rental prices. Users can submit info about their rent costs, and the app tracks this data, graphing out rental increases over the years, and showing how each property's price fluctuations compare to the rest of the market.
 
 ## Examples
 
