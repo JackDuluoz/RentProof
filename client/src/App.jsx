@@ -4,17 +4,17 @@ import { PropertyIdProvider } from "./providers/PropertyIdProvider";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ReactSession } from "react-client-session";
 import "./App.scss";
-import AddPrice from "./components/create/AddPrice";
-import AddProperty from "./components/create/AddProperty";
-import AdminPending from "./components/admin/AdminPending";
-import Login from "./components/session/Login";
-import Map from "./components/map/Map";
+import AddPrice from "./pages/Create/Update/AddPrice";
+import AddProperty from "./pages/Create/Find/AddProperty";
+import Pending from "./pages/Admin/Pending/Pending";
+import Login from "./pages/Login/Login";
+import Map from "./pages/Home/map/Map";
 import Header from "./components/navbar/Header";
-import PropertyList from "./components/create/CreatePropertyList";
-import Register from "./components/session/Register";
-import RentList from "./components/RentList";
+import PropertyList from "./pages/Create/Find/CreatePropertyList";
+import Register from "./pages/Register/Register";
+import Rentals from "./pages/Home/rentals/Rentals";
 import LoadingSpinner from "./components/LoadingSpinner";
-import Dashboard from "./components/admin/Dashboard";
+import Dashboard from "./pages/Admin/Dashboard/Dashboard";
 
 function App() {
   ReactSession.setStoreType("sessionStorage");
@@ -35,7 +35,7 @@ function App() {
             <Route exact path="/">
               <Map />
               <div className="home-right">
-                <RentList />
+                <Rentals />
               </div>
             </Route>
               
@@ -45,7 +45,7 @@ function App() {
               
             <Route exact path="/admin/pending">
               <div className="admin-background">
-                <AdminPending />
+                <Pending />
               </div>
             </Route>
               
