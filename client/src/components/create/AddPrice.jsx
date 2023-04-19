@@ -12,9 +12,9 @@ import DocumentList from "./DocumentList";
 
 const AddPrice = () => {
 
-  const { users, setUsers, properties, setProperties, prices, setPrices } = useContext(DataBaseContext);
+  const { setPrices } = useContext(DataBaseContext);
 
-  const { updateId, setUpdateId } = useContext(PropertyIdContext);
+  const { updateId } = useContext(PropertyIdContext);
 
   const [id, setId] = useState(updateId);
   const [cost, setCost] = useState("");
@@ -56,12 +56,9 @@ const AddPrice = () => {
       number_of_bathrooms: bathrooms,
     };
 
-    console.log("Clicked Add Price");
-
     axios
       .post("http://localhost:8001/prices", price)
       .then((response) => {
-        console.log('New Price Added', response.data);
         setPrices(prev => [...prev, response.data])
         history.push('/')
       })

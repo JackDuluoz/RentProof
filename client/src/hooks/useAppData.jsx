@@ -10,8 +10,6 @@ export const useAppData = () => {
     minVal,
     maxVal,
   });
-  // console.log("maxVal ➤", maxVal);
-  // console.log("APPselectedButtons ➤", selectedButtons);
 
   const handleClick = (index) => {
     if (selectedButtons.includes(index)) {

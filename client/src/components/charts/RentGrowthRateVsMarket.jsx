@@ -78,26 +78,6 @@ const RentGrowthRateVsMarket = (props) => {
       priceObject[price.property_id].push(price);
     }
 
-    // This broke when lots of properties were deleted and created. The code below it is a refactor that seems to be working :)
-
-    // // Loop through each property to get an integer for querying the priceObject object
-    // for (let i = 1; i < properties.length + 1; i++) {
-    //   console.log(i);
-    //   // Another loop for getting the index of the array inside of each priceObject index (priceObject is an object full of arrays)
-    //   for (let j = 1; j < priceObject[i].length; j++) {
-    //     // Compare the current year's price with last year's price, and push the difference as a percentage to the increasePerYear object
-    //     allIncreasesPerYear[priceObject[i][j].date.substring(0, 4)].push(
-    //       Math.round(
-    //         ((parseInt(priceObject[i][j].price) -
-    //           parseInt(priceObject[i][j - 1].price)) /
-    //           parseInt(priceObject[i][j - 1].price)) *
-    //           100 *
-    //           10
-    //       ) / 10
-    //     );
-    //   }
-    // }
-
     // Loop through each property to get an integer for querying the priceObject object
     for (let property of properties) {
       // Another loop for getting the index of the array inside of each priceObject index (priceObject is an object full of arrays)
@@ -228,8 +208,6 @@ const RentGrowthRateVsMarket = (props) => {
   if (data.length < 2) {
     return <div>Not enough data</div>;
   }
-
-  // console.log("dataLogLog", data);
 
   return (
     <div>

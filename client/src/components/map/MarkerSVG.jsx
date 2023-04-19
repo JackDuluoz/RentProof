@@ -32,8 +32,6 @@ function Marker({
     state,
   } = useContext(MarkerFilterContext);
 
-  // console.log("state.currentProperty ➤", state.currentProperty);
-
   function percentageToHexColor(percentage, lightness = 0, saturation = 100) {
     let R, G, B;
     percentage -= 60;
@@ -132,8 +130,6 @@ function Marker({
       anchor: new Point(13, 32),
     };
   }
-  // console.log("state.currentProperty.id === id ➤", state.currentProperty.id === id);
-  // console.log("state.prevProperty.includes(id) ➤", state.prevProperty.includes(id));
 
   return (
     <div>

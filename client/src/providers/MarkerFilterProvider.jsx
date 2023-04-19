@@ -1,5 +1,4 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
-import axios from "axios";
 import { DataBaseContext } from "../providers/DataBaseProvider";
 export const MarkerFilterContext = createContext();
 
@@ -7,14 +6,7 @@ export const MarkerFilterProvider = ({ children }) => {
   const { properties } = useContext(DataBaseContext);
   const [selectedBedrooms, setSelectedBedrooms] = useState([]);
   const [selectedBathrooms, setSelectedBathrooms] = useState([]);
-  const [selectedProperty, setSelectedProperty] = useState({
-    // id: 114,
-    // province: "BC",
-    // city: "Vancouver",
-    // street_address: "679 E Cordova St, Vancouver",
-    // latitude: "49.282258500",
-    // longitude: "-123.089670000",
-  });
+  const [selectedProperty, setSelectedProperty] = useState({});
   const [minF, setMinF] = useState(1);
   const [maxF, setMaxF] = useState(5000);
   const [state, setState] = useState({
@@ -24,8 +16,6 @@ export const MarkerFilterProvider = ({ children }) => {
     currentProperty: {},
     prevProperty: [],
   });
-
-  // console.log("state.currentProperty ➤", state.currentProperty.id);
 
   const handleClickBeds = (index) => {
     if (selectedBedrooms.includes(index)) {
@@ -48,15 +38,8 @@ export const MarkerFilterProvider = ({ children }) => {
   }
 
   const handleClickMarker = (id) => {
-    // axios
-    //   .get(`http://localhost:8001/properties/${id}`)
-    //   .then((response) => {
-    //     setSelectedProperty(response.data);
-    //     // console.log("response.data ➤", response.data);
-    //   })
-    //   .catch((error) => console.error(error));
     const newProperty = getPropertyById(id)[0]
-    console.log("Selected Property", newProperty)
+    // console.log("Selected Property", newProperty)
     setSelectedProperty(newProperty)
   };
 

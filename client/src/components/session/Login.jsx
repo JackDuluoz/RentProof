@@ -7,7 +7,7 @@ import './Register.scss'
 
 const Login = () => {  
 
-  const { users, setUsers, properties, setProperties, prices, setPrices } = useContext(DataBaseContext);
+  const { setUsers } = useContext(DataBaseContext);
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -24,13 +24,11 @@ const Login = () => {
     axios.post('http://localhost:8001/users/login', user)
       .then((response) => {
         const userObject = response.data.user
-        console.log('Successful Login', userObject);
         ReactSession.set("id", userObject.id);
         ReactSession.set("role", userObject.role);
         ReactSession.set("name", userObject.name);
         setUsers(prev => [...prev])
         history.push('/')
-        // window.location.reload();
       })
       .catch((error) => {
         console.log(error.response.data.message);

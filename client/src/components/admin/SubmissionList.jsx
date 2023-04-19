@@ -10,7 +10,7 @@ import { InputText } from "primereact/inputtext"
 import { Button } from "primereact/button"
 
 export default function SubmissionList() {
-  const { users, setUsers, properties, setProperties, prices, setPrices } = useContext(DataBaseContext);
+  const { users, properties, prices, setPrices } = useContext(DataBaseContext);
 
   const [filters, setFilters] = useState({
     global: {value: null, matchMode: FilterMatchMode.CONTAINS}
@@ -33,10 +33,8 @@ export default function SubmissionList() {
   }
 
   const handleApprove = (id) => {
-    console.log("Clicked Approve")
     axios.put(`http://localhost:8001/prices/approve/${id}`)
       .then((response) => {
-        console.log('Price Approved', response.data);        
  	      const index = prices.findIndex((p) => p.id === response.data.id);
         const newPrices = [...prices]
         newPrices.splice(index, 1, response.data)
@@ -48,10 +46,8 @@ export default function SubmissionList() {
  }
   
   const handleReject = (id) => {
-    console.log("Clicked Reject")
     axios.put(`http://localhost:8001/prices/reject/${id}`)
       .then((response) => {
-        console.log('Price Rejected', response.data);
         const index = prices.findIndex((p) => p.id === response.data.id);
         const newPrices = [...prices]
         newPrices.splice(index, 1, response.data)
@@ -71,7 +67,7 @@ export default function SubmissionList() {
     const documentURL = submission.documentation 
     return {
       id: submission.id,
-      photo: <a target="_blank" href={photoURL} ><img src={photoURL} alt="Image" id="pending-img" width='120px' height='90px' /></a>,
+      photo: <a target="_blank" rel="noreferrer" href={photoURL} ><img src={photoURL} alt="submission" id="pending-img" width='120px' height='90px' /></a>,
       address: getPropertyByPriceId(submission).street_address,
       city: getPropertyByPriceId(submission).city,
       province: getPropertyByPriceId(submission).province,

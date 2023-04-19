@@ -22,7 +22,6 @@ const DocumentUpload = ({ files, setFiles, removeFile, setDocument }) => {
               file.isUploading = false;
               setFiles([...files, file])
               setDocument(file.name)
-              console.log(`${res.data.message.newFile.name} Added`)
             })
             .catch((err) => {
                 console.error(err)

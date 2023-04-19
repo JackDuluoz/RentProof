@@ -5,8 +5,7 @@ import './AddProperty.scss'
 
 const AddProperty = () => {
 
-  // console.log("Ran Add Property")
-  const { users, setUsers, properties, setProperties, prices, setPrices } = useContext(DataBaseContext);
+  const { setProperties } = useContext(DataBaseContext);
 
   const [province, setProvince] = useState('');
   const [city, setCity] = useState('');
@@ -19,8 +18,6 @@ const AddProperty = () => {
     const addressForUrl = `${address}, ${city}`
     const propertyURL = `https://maps.googleapis.com/maps/api/geocode/json?address=${addressForUrl}&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}` 
 
-    console.log('Clicked Add Property')
-    
     axios.get(propertyURL)
       .then((response) => {
         const latitude = response.data.results[0].geometry.location.lat 
@@ -34,7 +31,6 @@ const AddProperty = () => {
         }
         axios.post('http://localhost:8001/properties', property)
           .then((response) => {
-            console.log('New Property Added', response.data);
             setMessage(`Property ${response.data.id} Added`)
             const propertyWithId = {
               'id': response.data.id,

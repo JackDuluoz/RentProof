@@ -1,6 +1,4 @@
 .home-right {
-  border-left: 2px solid #88c2ee !important;
-  border-right: 2px solid #88c2ee !important;
   height: 90vh;
 }
 
@@ -8,24 +6,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(235, 247, 251);
+  background-color: #f2f3ef;
   height: 100%;
 }
 
-// .img-container{
-//     max-height: 13em;
-//     min-height: 13em;
-//     margin: 1em;
-//     display: flex;
-//     border-radius: 10%;
-//     border-color: blanchedalmond;
-//     transition: all 0.3s ease-in-out;
-//     border: 4px solid red;
-// }
-
 .slider-container {
   width: 100%;
-  // margin: 0.25em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,23 +65,26 @@
 }
 
 .p-panel-header {
-  background-color: rgb(33, 107, 255) !important;
-  width: 27vw !important;
-  height: 50px;
+  background-color: #efb730 !important;
+  border: none !important;
+  width: 27vw;
+}
+
+.p-panel-title {
+  color: #030305 !important;
 }
 
 .p-panel-icons #ChartsPanel_label {
-  background-color: #59b9f8;
-  border: 1px solid white;
-  color: white;
+  background-color: rgba(255,255,255,0.5);
+  color: #030305;
 }
 
 .p-panel-content {
-  background-color: rgb(235, 247, 251) !important;
+  background-color: #f2f3ef !important;
 }
 
 .selected-property-charts {
-  background-color: rgb(235, 247, 251);
+  background-color: #f2f3ef !important;
 }
 
 .image {

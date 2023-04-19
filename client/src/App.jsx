@@ -3,7 +3,7 @@ import { DataBaseContext } from "./providers/DataBaseProvider";
 import { PropertyIdProvider } from "./providers/PropertyIdProvider";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ReactSession } from "react-client-session";
-import "./App.css";
+import "./App.scss";
 import AddPrice from "./components/create/AddPrice";
 import AddProperty from "./components/create/AddProperty";
 import AdminPending from "./components/admin/AdminPending";
@@ -17,14 +17,7 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import Dashboard from "./components/admin/Dashboard";
 
 function App() {
-  console.log("Rendering App...");
-
   ReactSession.setStoreType("sessionStorage");
-  const userId = ReactSession.get("id");
-  const userRole = ReactSession.get("role");
-  const userName = ReactSession.get("name");
-  console.log(userId, userRole, userName);
-
   const { isLoading } = useContext(DataBaseContext);
 
   return isLoading ? (

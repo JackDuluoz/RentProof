@@ -7,7 +7,6 @@ const PhotoList = ({ files, removeFile, setPhoto }) => {
     const deleteFileHandler = (_name) => {
         axios.delete(`http://localhost:8001/upload/photos?name=${_name}`)
           .then((res) => {
-            console.log(res.data.msg)
             removeFile(_name)
             setPhoto("")
           })

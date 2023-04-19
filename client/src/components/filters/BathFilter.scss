@@ -24,9 +24,7 @@ $blended-color: mix($color1, $color2, $percentage);
 
 
 .filter-button.selected {
-    color: #fff;
-    background: #5ab8f8;
-    border-color: #5ab8f8;
+    background: #c2e3f4;
 }
 
 .filter-right {
@@ -65,7 +63,7 @@ margin-right: 2em;
     letter-spacing: .4px;
     text-align: center;
     background: #f7fdff;
-    border: 1px solid #c7e6fd;
+    border: none;
     border-radius: 3px;
     cursor: pointer;
 }

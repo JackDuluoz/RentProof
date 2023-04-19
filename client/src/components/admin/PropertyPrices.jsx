@@ -31,10 +31,8 @@ export default function PropertyPrices() {
   }
 
   const handleDelete = (id) => {
-    console.log("Clicked Delete Property")
     axios.delete(`http://localhost:8001/properties/${id}`)
       .then((response) => {
-        console.log('Property Deleted', response.data);
         const index = properties.findIndex((p) => p.id === response.data.id);
         const newProperties = [...properties]
         newProperties.splice(index, 1)
@@ -48,10 +46,8 @@ export default function PropertyPrices() {
   }
 
   const priceDelete = (id) => {
-    console.log("Clicked Delete Price")
     axios.delete(`http://localhost:8001/prices/${id}`)
       .then((response) => {
-        console.log('Price Deleted', response.data);
         const index = prices.findIndex((p) => p.id === response.data.id);
         const newPrices = [...prices]
         newPrices.splice(index, 1)

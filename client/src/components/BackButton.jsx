@@ -14,11 +14,11 @@ export default function BackButton() {
       className="back-button"
       onClick={handleClick}
     >
-      <svg height="8" width="14" className="back-arrow">
+      <svg height="8" width="14">
         <title>back-arrow</title>
         <path
           d="M.64 4.219L4.017.844V3.64h9.156v1.156H4.016v2.797z"
-          fill="white"
+          fill="#030305"
           fillRule="evenodd"
         ></path>
       </svg>

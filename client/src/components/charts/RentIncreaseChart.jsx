@@ -20,7 +20,6 @@ const RentIncreaseChart = (props) => {
           <p className="label tooltip-text">{`Year: ${label}`}</p>
           <p className="tooltip-text">{`Increase percentage: ${payload[0].value}%`}</p>
           <p className="tooltip-text">{`Increase amount: $${payload[0].payload.increase_amount}`}</p>
-          {/* {console.log("load", payload)} */}
         </div>
       );
     }
@@ -45,8 +44,6 @@ const RentIncreaseChart = (props) => {
       });
     }
   }
-
-  // console.log("data", data);
 
   if (data.length < 2) {
     return <div>Not enough data</div>;

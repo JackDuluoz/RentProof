@@ -91,8 +91,6 @@ const RentIncreaseChart = (props) => {
         Math.round((sum / allIncreasesPerYear[i].length) * 100) / 100;
     }
 
-    // console.log("averageIncrease", averageIncreasePerYear);
-
     return;
   };
 
@@ -163,11 +161,8 @@ const RentIncreaseChart = (props) => {
   getRentIncreaseAverages(prices, properties);
   showPricesBasedOnAverages();
 
-  // console.log("data", data);
-
   for (const dat of data) {
-    if (dat.compare_at_price === NaN) {
-      // console.log("dat", dat);
+    if (isNaN(dat.compare_at_price) === true) {
     }
   }
 
@@ -184,8 +179,6 @@ const RentIncreaseChart = (props) => {
     }
     return null;
   };
-
-  // console.log("data", data);
 
   return data.length < 3 ? (
     <div>Not enough data</div>

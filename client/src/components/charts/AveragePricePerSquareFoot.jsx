@@ -8,7 +8,7 @@ import {
   Tooltip,
 } from "recharts";
 import "./Charts.scss";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { MarkerFilterContext } from "../../providers/MarkerFilterProvider";
 import { DataBaseContext } from "../../providers/DataBaseProvider";
 
@@ -106,9 +106,6 @@ const AveragePricePerSquareFoot = (props) => {
     prices = updatedPrices;
   }
 
-  // console.log("properties", properties);
-  // console.log("prices", prices);
-
   const getAveragePricePerFoot = (prices) => {
     const allPricesPerYear = {
       2014: [],
@@ -127,7 +124,6 @@ const AveragePricePerSquareFoot = (props) => {
     for (let i = 1; i < prices.length; i++) {
       allPricesPerYear[prices[i].date.substring(0, 4)].push(prices[i]);
     }
-    // console.log("allPricesPer", allPricesPerYear);
 
     for (let i = 2014; i <= 2023; i++) {
       let priceSum = 0;
@@ -140,7 +136,6 @@ const AveragePricePerSquareFoot = (props) => {
       const averagePricePerFoot =
         Math.round((priceSum / squareFootSum) * 100) / 100;
 
-      // console.log("pricePerFoot", averagePricePerFoot);
       data.push({
         date: i,
         Price: averagePricePerFoot,
@@ -158,14 +153,11 @@ const AveragePricePerSquareFoot = (props) => {
         <div className="custom-tooltip">
           <p className="label tooltip-text">{`Year: ${label}`}</p>
           <p className="tooltip-text">{`Price per square foot (monthly): $${payload[0].value}`}</p>
-          {/* {console.log("load", payload)} */}
         </div>
       );
     }
     return null;
   };
-
-  // console.log("dataLoggy", data);
 
   return (
     <div>

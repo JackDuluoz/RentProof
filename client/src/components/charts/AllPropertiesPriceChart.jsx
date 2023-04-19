@@ -8,33 +8,18 @@ import {
   Tooltip,
 } from "recharts";
 import "./Charts.scss";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { MarkerFilterContext } from "../../providers/MarkerFilterProvider";
 import { DataBaseContext } from "../../providers/DataBaseProvider";
 
 const AllPropertiesPriceChart = (props) => {
-  // const [data, setData] = [];
   const data = [];
-  // const prices = props.prices;
-  // const properties = props.properties;
   const {
     selectedBedrooms,
-    selectedBathrooms,
-    handleClickMarker,
-    minF,
-    maxF,
-    state,
+    selectedBathrooms
   } = useContext(MarkerFilterContext);
 
   let { prices, properties } = useContext(DataBaseContext);
-
-  // console.log(
-  //   "beds, baths, min, max",
-  //   selectedBedrooms,
-  //   selectedBathrooms,
-  //   minF,
-  //   maxF
-  // );
 
   if (selectedBedrooms.length && !selectedBathrooms.length) {
     const updatedProperties = [];
@@ -131,9 +116,6 @@ const AllPropertiesPriceChart = (props) => {
     prices = updatedPrices;
   }
 
-  // console.log("properties", properties);
-  // console.log("prices", prices);
-
   const getAveragePrices = (prices, properties) => {
     const allPricesPerYear = {
       2014: [],
@@ -151,16 +133,6 @@ const AllPropertiesPriceChart = (props) => {
     // Compare all prices to that of the year previous, and send the calculated rent increase to an allIncreasesPerYear object
     for (let i = 1; i < prices.length; i++) {
       allPricesPerYear[prices[i].date.substring(0, 4)].push(prices[i]);
-      // if (prices[i].date.substring(0, 4) > prices[i - 1].date.substring(0, 4)) {
-      //   (
-      //     Math.round(
-      //       ((parseInt(prices[i].price) - parseInt(prices[i - 1].price)) /
-      //         parseInt(prices[i - 1].price)) *
-      //         100 *
-      //         10
-      //     ) / 10
-      //   );
-      // }
     }
 
     for (let i = 2014; i <= 2023; i++) {
@@ -186,7 +158,6 @@ const AllPropertiesPriceChart = (props) => {
         <div className="custom-tooltip">
           <p className="label tooltip-text">{`Year: ${label}`}</p>
           <p className="tooltip-text">{`Average rent price: $${payload[0].value}`}</p>
-          {/* {console.log("load", payload)} */}
         </div>
       );
     }

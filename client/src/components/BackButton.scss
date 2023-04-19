@@ -1,8 +1,8 @@
 .back-button {
-  background-color: #5AB8F8;
-  border: 1px solid #88c2ee;
+  background-color: #efb730;
+  border: none;
   border-radius: 3px;
-  color: white;
+  color: #030305;
   cursor: pointer;
   display: inline-block;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -20,9 +20,5 @@
 }
 
 .back-button:hover {
-  background-color: royalblue
-}
-
-.back-arrow {
-  color: white !important;
+  background-color: rgba(239,183,48,0.7)
 }

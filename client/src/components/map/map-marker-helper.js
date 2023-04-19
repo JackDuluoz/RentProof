@@ -85,8 +85,6 @@ const getPropertyById = (id) => {
   return properties
     .filter(property => property.id === id)
 }
-console.log(getPropertyById(4))
-
 
 const prices = [
   {
@@ -382,10 +380,6 @@ const prices = [
 //     });
 // }
 
-// console.log (propertiesWithAtLeastOneApprovedPrice(properties, prices))
-
-// console.log(prices.length)
-
 // const testProperty = {
 //     "id": 10,
 //     "province": "BC",
@@ -406,8 +400,6 @@ const prices = [
 //     })
 // }
 
-// console.log(deletePricesForProperty(testProperty))
-
 // const getPricesForProperty = (propertyId, prices) => {
 //       let propertyPriceArray = []
 //         for (let price of prices) {
@@ -417,5 +409,3 @@ const prices = [
 //         }
 //       return propertyPriceArray
 // }
-    
-// console.log(getPricesForProperty(10, prices))

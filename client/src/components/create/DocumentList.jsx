@@ -7,7 +7,6 @@ const DocumentList = ({ files, removeFile, setDocument }) => {
     const deleteFileHandler = (_name) => {
         axios.delete(`http://localhost:8001/upload/documents?name=${_name}`)
           .then((res) => {
-            console.log(res.data.msg)
             removeFile(_name)
             setDocument("")
           })

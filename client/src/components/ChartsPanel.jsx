@@ -17,8 +17,7 @@ import AveragePricePerSquareFoot from "./charts/AveragePricePerSquareFoot";
 
 const ChartsPanel = () => {
   const { state } = useContext(MarkerFilterContext);
-  const { users, setUsers, properties, setProperties, prices, setPrices } =
-    useContext(DataBaseContext);
+  const { properties, prices } = useContext(DataBaseContext);
 
   const priceHistory = useMemo(
     () => (prices ? getPriceHistory(state.currentProperty.id, prices) : null),
@@ -29,7 +28,7 @@ const ChartsPanel = () => {
 
   return (
     <Panel
-      header="Price Info"
+      header="Price Data"
       righticon="pi pi-times"
       toggleable
       style={{ color: "#59B9F8" }}

@@ -1,5 +1,5 @@
 import "./RentList.scss";
-import React, { useState, useEffect, useMemo } from "react";
+import React from "react";
 import BackButton from "./BackButton";
 import MultiRangeSlider from "./multiRangeSlider/MultiRangeSlider";
 import BedFilter from "./filters/BedFilter";
@@ -15,45 +15,12 @@ import {
   getBedroomsFromPrices,
   getBathroomsFromPrices,
 } from "./helpers/getDataFromPrices";
-import LazyLoad from "react-lazyload";
-import WelcomeCard from "./WelcomeCard";
 
 const RentList = () => {
   const { state } = useContext(MarkerFilterContext);
-  const { users, setUsers, properties, setProperties, prices, setPrices } =
-    useContext(DataBaseContext);
+  const { prices } = useContext(DataBaseContext);
 
-  const [showCharts, setShowCharts] = useState(false);
-  const [chartData, setChartData] = useState(null);
-
-  const cost = useMemo(() => {
-    return prices ? getCostFromPrices(state.currentProperty, prices) : "";
-  }, [prices, state.currentProperty]);
-
-  const photo = useMemo(() => {
-    return prices
-      ? getPhotoFromPrices(state.currentProperty, prices)
-      : "https://media.npr.org/assets/img/2013/12/10/ap101018123881-ca0472fba716df4b485fff878b558284cdc89ab9.jpg";
-  }, [prices, state.currentProperty]);
-
-  const size = useMemo(() => {
-    return prices ? getSizeFromPrices(state.currentProperty, prices) : "";
-  }, [prices, state.currentProperty]);
-
-  const bedrooms = useMemo(() => {
-    return prices ? getBedroomsFromPrices(state.currentProperty, prices) : "";
-  }, [prices, state.currentProperty]);
-
-  const bathrooms = useMemo(() => {
-    return prices ? getBathroomsFromPrices(state.currentProperty, prices) : "";
-  }, [prices, state.currentProperty]);
-
-  useEffect(() => {
-    if (showCharts) {
-      // fetch chart data from API
-      // setChartData(data)
-    }
-  }, [showCharts]);
+  
 
   return (
     <div className="RentList">
@@ -134,27 +101,7 @@ const RentList = () => {
           </table>
         </React.Fragment>
       ) : (
-        <>
-          <img
-            src="/too_damn_dry.png"
-            alt="Rent List"
-            className="image too_damn_dry"
-          />
-          <WelcomeCard />
-          {/* <table className="home-right-property-table-top">
-            <thead>
-              <tr>
-                <th>Properties</th>
-                <th>Prices</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>{properties.length}</td>
-                <td>{prices.length}</td>
-              </tr>
-            </tbody>
-          </table> */}
+        <>          
         </>
       )}
       <ChartsPanel />

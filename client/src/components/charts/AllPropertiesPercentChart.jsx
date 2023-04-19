@@ -8,33 +8,18 @@ import {
   Tooltip,
 } from "recharts";
 import "./Charts.scss";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { MarkerFilterContext } from "../../providers/MarkerFilterProvider";
 import { DataBaseContext } from "../../providers/DataBaseProvider";
 
 const AllPropertiesPercentChart = (props) => {
-  // const [data, setData] = [];
   const data = [];
-  // const prices = props.prices;
-  // const properties = props.properties;
   const {
     selectedBedrooms,
-    selectedBathrooms,
-    handleClickMarker,
-    minF,
-    maxF,
-    state,
+    selectedBathrooms
   } = useContext(MarkerFilterContext);
 
   let { prices, properties } = useContext(DataBaseContext);
-
-  // console.log(
-  //   "beds, baths, min, max",
-  //   selectedBedrooms,
-  //   selectedBathrooms,
-  //   minF,
-  //   maxF
-  // );
 
   if (selectedBedrooms.length && !selectedBathrooms.length) {
     const updatedProperties = [];
@@ -131,9 +116,6 @@ const AllPropertiesPercentChart = (props) => {
     prices = updatedPrices;
   }
 
-  // console.log("properties", properties);
-  // console.log("prices", prices);
-
   const getRentIncreaseAverages = (prices, properties) => {
     const allIncreasesPerYear = {
       2014: [],
@@ -197,7 +179,6 @@ const AllPropertiesPercentChart = (props) => {
           <p className="label tooltip-text">{`Year: ${label}`}</p>
           <p className="tooltip-text">{`Average increase: ${payload[0].value}%`}</p>
           <p className="tooltip-text">{`Allowable increase for existing leases: ${payload[1].value}%`}</p>
-          {/* {console.log("load", payload)} */}
         </div>
       );
     }

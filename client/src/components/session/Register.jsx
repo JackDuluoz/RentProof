@@ -7,7 +7,7 @@ import './Register.scss'
 
 const Register = () => {
 
-  const { users, setUsers, properties, setProperties, prices, setPrices } = useContext(DataBaseContext);
+  const { setUsers } = useContext(DataBaseContext);
   
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -25,9 +25,7 @@ const Register = () => {
 
     axios.post('http://localhost:8001/users/register', user)
       .then((response) => {
-        console.log('New User Registered', response.data);
         const userObject = response.data.user
-        console.log(userObject)
         ReactSession.set("id", userObject.id);
         ReactSession.set("role", userObject.role);
         ReactSession.set("name", userObject.name);

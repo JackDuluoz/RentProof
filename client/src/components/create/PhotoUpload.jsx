@@ -22,7 +22,6 @@ const PhotoUpload = ({ files, setFiles, removeFile, setPhoto }) => {
               file.isUploading = false;
               setFiles([...files, file])
               setPhoto(file.name)
-              console.log(`${res.data.message.newFile.name} Added`)
             })
             .catch((err) => {
                 console.error(err)

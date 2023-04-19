@@ -5,19 +5,13 @@ import React, {
   useRef,
   useContext,
 } from "react";
-import PropTypes from "prop-types";
-import "./multiRangeSlider.css";
+import "./multiRangeSlider.scss";
 import { MarkerFilterContext } from "../../providers/MarkerFilterProvider";
 
 
 const MultiRangeSlider = () => {
-  // console.log("rerendering");
   const min = 0;
   const max = 10000;
-  const onChange = ({ min, max }) =>
-    console
-      .log //`min = ${min}, max = ${max}`
-      ();
   const { setMinF, setMaxF } = useContext(MarkerFilterContext);
   const minValRef = useRef(min);
   const maxValRef = useRef(max);
@@ -52,10 +46,7 @@ const MultiRangeSlider = () => {
     }
   }, [maxVal, getPercent]);
 
-  // Get min and max values when their state changes
-  useEffect(() => {
-    onChange({ min: minVal, max: maxVal });
-  }, [minVal, maxVal, onChange]);
+
 
   return (
     <div className="container">

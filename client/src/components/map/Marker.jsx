@@ -42,8 +42,6 @@ function Marker({
   if (costVSavg <= -20) {costVSavg = -20}
   costVSavg = Math.floor((costVSavg + 20) / 2.4);
   if (costVSavg>=14){costVSavg=14}
-  //  console.log("costVSavg ➤", costVSavg); 
-
 
   const isGray =
     state.prevProperty.includes(id) && state.currentProperty.id !== id;

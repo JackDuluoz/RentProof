@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import { DataBaseContext } from "../../providers/DataBaseProvider";
 import { PropertyIdContext } from "../../providers/PropertyIdProvider";
 import { DataTable } from "primereact/datatable";
@@ -13,10 +13,8 @@ import "./CreatePropertyList.scss";
 
 export default function PropertyList() {
 
-  // console.log("Ran Property List")
-  
-  const { users, setUsers, properties, setProperties, prices, setPrices } = useContext(DataBaseContext);
-  const { updateId, setUpdateId } = useContext(PropertyIdContext);
+  const { properties } = useContext(DataBaseContext);
+  const { setUpdateId } = useContext(PropertyIdContext);
 
   const history = useHistory()
 
@@ -25,7 +23,6 @@ export default function PropertyList() {
   });
 
   const update = (id) => {
-    console.log("User Clicked Update");
     setUpdateId(id);
     history.push("/create/update");
   };
