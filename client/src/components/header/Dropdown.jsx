@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom/cjs/react-router-dom";
+import './Dropdown.scss'
 
 const Dropdown = ({ submenus, dropdown }) => {
   return (

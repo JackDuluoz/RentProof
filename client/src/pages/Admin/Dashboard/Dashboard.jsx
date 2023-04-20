@@ -1,16 +1,14 @@
-import PropertyPrices from './PropertyPrices';
-import './Dashboard.scss'
+import Database from './Database';
 import SideBar from './SideBar'
+import './Dashboard.scss'
 
 const Dashboard = () => {  
   
   return (
-    <div className="admin-background">
       <div className="dashboard">
       <SideBar />
-      <PropertyPrices />
+      <Database />
       </div>
-    </div>
   );
 }
  

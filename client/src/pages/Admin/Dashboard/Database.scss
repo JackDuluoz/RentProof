@@ -1,0 +1,66 @@
+
+.card .p-datatable * :not(.p-button-danger, .p-button-label) {
+  background-color: rgba(255,255,255,0.4) !important;
+  color: #030305;
+  border: none !important;
+}
+
+.card .p-datatable {
+  width: 90vw;
+  height: 80vh;
+  margin-left: 5vw;
+  margin-top: 5vh;
+  border-radius: 12px;
+  overflow: hidden;
+
+  .p-inputtext {
+    width: 40vw;
+    text-align: left;
+  }
+
+  .p-datatable-header {
+    font-size: 1.8rem;
+    background-color: #efb730 !important;
+    color: #030305;
+    display: flex;
+    justify-content: center; 
+  }
+
+  .p-datatable-thead tr {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  }
+
+  .p-datatable-thead tr th {
+    display: flex;
+    flex-grow: 0.1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100px ;
+  }
+
+  .p-datatable-tbody tr {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  }
+
+  .p-datatable-tbody tr td {
+    display: flex;
+    flex-grow: 0.1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100px ;
+  }
+
+  h5 {
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+  }
+
+}

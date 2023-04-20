@@ -1,0 +1,17 @@
+.dropdown {
+  position: absolute;
+  right: 0;
+  left: 0;
+  font-size: 0.875rem;
+  z-index: 9999;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  list-style: none;
+  background-color: #efb730;
+  display: none;
+  margin-top: 4em;
+}
+
+.dropdown.show {
+  display: block;
+}

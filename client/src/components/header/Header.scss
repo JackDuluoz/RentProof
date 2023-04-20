@@ -1,0 +1,22 @@
+header {
+  height: 10vh;
+  background-color: #efb730;
+  color: #030305;
+  display: flex;
+}
+
+.nav-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95vw;
+  margin-left: 2.5vw;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 3rem;
+  color: inherit;
+}
+
+

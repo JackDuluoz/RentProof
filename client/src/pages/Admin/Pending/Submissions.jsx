@@ -8,8 +8,9 @@ import "primereact/resources/primereact.min.css"
 import { FilterMatchMode } from "primereact/api"
 import { InputText } from "primereact/inputtext"
 import { Button } from "primereact/button"
+import './Submissions.scss'
 
-export default function SubmissionList() {
+export default function Submissions() {
   const { users, properties, prices, setPrices } = useContext(DataBaseContext);
 
   const [filters, setFilters] = useState({
@@ -84,7 +85,7 @@ export default function SubmissionList() {
     .reverse()  
   )
   return (
-    <div>
+    <div className="submission-table">
       <InputText
         placeholder="Search"
         onInput={(e) =>

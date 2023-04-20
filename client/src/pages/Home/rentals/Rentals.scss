@@ -94,10 +94,6 @@
   border-color: blanchedalmond;
   transition: all 0.3s ease-in-out;
 
-  &:hover {
-    transform: scale(1.05);
-  }
-
   &.focus {
     transform: translate(-50%, -50%) scale(2);
     position: absolute;

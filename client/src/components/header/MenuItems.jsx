@@ -1,15 +1,14 @@
 import React, { useContext, useState } from "react";
-import { DataBaseContext } from "../../providers/DataBaseProvider";
 import Dropdown from './Dropdown';
-import { ReactSession } from 'react-client-session';
 import { Link } from "react-router-dom";
+import { ReactSession } from 'react-client-session';
+import { DataBaseContext } from "../../providers/DataBaseProvider";
+import './MenuItems.scss'
 
 const MenuItems = ({ items }) => {
-
   const { setUsers } = useContext(DataBaseContext);
-
-  const userRole = ReactSession.get("role");
   const [dropdown, setDropdown] = useState(false);
+  const userRole = ReactSession.get("role");
 
   const logout = () => {
     ReactSession.remove("id");

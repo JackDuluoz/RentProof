@@ -1,15 +1,15 @@
 import React, { useState, useContext, useRef } from 'react';
-import { DataBaseContext } from "../../../providers/DataBaseProvider";
 import axios from 'axios';
-import { DataTable } from 'primereact/datatable';
-import { Column } from 'primereact/column';
+import { DataBaseContext } from "../../../providers/DataBaseProvider";
 import { Button } from 'primereact/button';
-import { Toast } from 'primereact/toast';
+import { Column } from 'primereact/column';
+import { DataTable } from 'primereact/datatable';
 import { FilterMatchMode } from "primereact/api"
 import { InputText } from "primereact/inputtext"
-import './Dashboard.scss'
+import { Toast } from 'primereact/toast';
+import './Database.scss'
 
-export default function PropertyPrices() {
+export default function Database() {
 
   const { properties, setProperties, prices, setPrices } = useContext(DataBaseContext);
 
@@ -97,16 +97,6 @@ export default function PropertyPrices() {
       toast.current.show({severity: 'success', summary: 'Property Collapsed', detail: event.data.name, life: 1500});
   }
 
-  const expandAll = () => {
-    let _expandedRows = {};
-    tableProperties.forEach(tableProperty => _expandedRows[`${tableProperty.id}`] = true);
-    setExpandedRows(_expandedRows);
-  }
-
-  const collapseAll = () => {
-    setExpandedRows(null);
-  }
-
   const allowExpansion = (rowData) => {
     return true
   };
@@ -118,7 +108,7 @@ export default function PropertyPrices() {
         <DataTable value={data.propertyPrices.reverse()}
           responsiveLayout="scroll"
           paginator
-          rows={5}
+          rows={6}
         >
           <Column field="id" header="Id" sortable></Column>
           <Column field="date" header="Date" sortable></Column>
@@ -131,9 +121,6 @@ export default function PropertyPrices() {
 
   const header = (
     <div className="table-header-container">
-      {/* <h3>Products and Prices</h3> */}
-      <Button icon="pi pi-plus" label="Expand All" onClick={expandAll} className="expand" />
-      <Button icon="pi pi-minus" label="Collapse All" onClick={collapseAll} className="collapse" />
       <InputText
       placeholder="Search"
       onInput={(e) =>
@@ -147,7 +134,8 @@ export default function PropertyPrices() {
   return (
     <div className="card">
       <Toast ref={toast} />
-      <DataTable  value={tableProperties}
+      <DataTable
+        value={tableProperties}
         expandedRows={expandedRows}
         onRowToggle={(e) => setExpandedRows(e.data)}
         onRowExpand={onRowExpand}

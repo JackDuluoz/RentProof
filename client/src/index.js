@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.scss";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import { MarkerFilterProvider } from "./providers/MarkerFilterProvider";
 import { DataBaseProvider } from "./providers/DataBaseProvider";
+import { MarkerFilterProvider } from "./providers/MarkerFilterProvider";
+import reportWebVitals from "./reportWebVitals";
+import "./index.scss";
 
 ReactDOM.render(
   <React.StrictMode>

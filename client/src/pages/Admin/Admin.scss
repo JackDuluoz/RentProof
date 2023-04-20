@@ -1,9 +1,12 @@
 .pending-prices {
-  width: 90vw;
-  margin-left: 5vw;
-  margin-top: 2em;
+  height: 90vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
+  background-image: url("../../../public/background-login.jpg");;
+  background-blend-mode: multiply;
+  background-position: center center;
+  background-size: cover;
 }
 
 #pending-img {

@@ -1,7 +1,7 @@
 import { ReactSession } from "react-client-session";
-import "./Navbar.scss";
-import { menuItems } from "./menuItems.js";
 import MenuItems from "./MenuItems.jsx";
+import { menuItems } from "./menuItems.js";
+import "./Navbar.scss";
 
 const Navbar = () => {
   const userRole = ReactSession.get("role");
@@ -11,11 +11,13 @@ const Navbar = () => {
     .map((menu, index) => {
       return <MenuItems items={menu} key={index} />;
     });
+  
   const userMenuItems = menuItems
     .filter((i) => i.session === true && i.admin === false)
     .map((menu, index) => {
       return <MenuItems items={menu} key={index} />;
     });
+  
   const adminMenuItems = menuItems
     .filter(
       (i) => i.session === true && (i.admin === true || i.admin === false)

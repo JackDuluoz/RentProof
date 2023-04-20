@@ -2,7 +2,7 @@ import React from "react";
 import '../Admin.scss'
 import { ReactSession } from 'react-client-session';
 import { useHistory } from "react-router-dom";
-import SubmissionList from "./SubmissionList";
+import Submissions from "./Submissions";
 
 const Pending = () => {
   
@@ -15,7 +15,7 @@ const Pending = () => {
 
   return (
     <div className="pending-prices">
-        <SubmissionList />
+        <Submissions />
     </div>    
   )
 }

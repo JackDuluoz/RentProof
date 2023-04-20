@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { DataBaseContext } from "../../../providers/DataBaseProvider";
 import { Sidebar } from 'primereact/sidebar';
 import { Button } from 'primereact/button';
-import './Dashboard.scss'
+import './SideBar.scss'
 
 export default function SideBar() {
   const [visible, setVisible] = useState(false);

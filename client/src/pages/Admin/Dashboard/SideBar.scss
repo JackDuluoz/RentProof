@@ -1,0 +1,38 @@
+.sidebar {
+  display: flex;
+  align-self: center;
+  height: 80px;
+
+  button {
+    border: none;
+    background-color: #efb730;
+    color: #030305 !important;
+
+    &:hover {
+      background-color: rgba(239,183,48,0.8) !important;
+    }
+  }
+
+}
+
+.p-sidebar {
+  background-color: #efb730 !important;
+  color: #030305 !important;
+
+  .stats-title {
+    font-size: 2rem;
+    text-decoration: underline;
+  }
+
+  .stats {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .p-sidebar-header button {
+    background-color: rgba(255,255,255,0.5) !important;
+    color: #030305 !important;
+  }
+
+}
+
