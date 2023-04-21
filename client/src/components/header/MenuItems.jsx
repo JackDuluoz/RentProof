@@ -35,6 +35,7 @@ const MenuItems = ({ items }) => {
           <Dropdown
             submenus={items.submenu}
             dropdown={dropdown}
+            setDropdown={setDropdown}
           />
         </>
       ) : (

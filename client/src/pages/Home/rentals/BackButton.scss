@@ -1,16 +1,16 @@
 .back-button {
+  display: inline-block;
   background-color: #efb730;
+  color: #030305;
   border: none;
   border-radius: 3px;
-  color: #030305;
   cursor: pointer;
-  display: inline-block;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: .26px;
   line-height: 1.42857143;
-  margin-top: 5px;
+  margin-top: 15px;
   padding: 5.5px 10px;
   text-align: center;
   touch-action: manipulation;

@@ -31,14 +31,12 @@ function App() {
           <div>
             <Header />
           </div>
-        <div className="Content">
+        <div className="content">
           <Switch>
               
             <Route exact path="/">
               <Map />
-              <div className="home-right">
-                <Rentals />
-              </div>
+              <Rentals />
             </Route>
               
             <Route exact path="/admin/dashboard">

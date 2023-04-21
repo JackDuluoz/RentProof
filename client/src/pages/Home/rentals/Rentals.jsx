@@ -23,7 +23,7 @@ const Rentals = () => {
   
 
   return (
-    <div className="RentList">
+    <div className="rentals">
       <div className="slider-container">
         <BackButton />
 

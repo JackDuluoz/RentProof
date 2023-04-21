@@ -1,17 +1,9 @@
 import React, { useContext } from "react";
-import {
-  GoogleMap,
-  MarkerClusterer,
-  useLoadScript,
-} from "@react-google-maps/api";
-import "./Map.scss";
-import Marker from "./Marker.jsx";
-import {
-  getBedroomsFromPrices,
-  getBathroomsFromPrices,
-  getCostFromPrices,
-} from "../helpers/getDataFromPrices";
+import { GoogleMap, MarkerClusterer, useLoadScript } from "@react-google-maps/api";
 import { DataBaseContext } from "../../../providers/DataBaseProvider";
+import { getBedroomsFromPrices, getBathroomsFromPrices, getCostFromPrices } from "../helpers/getDataFromPrices";
+import Marker from "./Marker.jsx";
+import "./Map.scss";
 
 export default function MapDisplay(props) {
   const { isLoaded } = useLoadScript({

@@ -1,6 +1,6 @@
 import React, { useState, useContext, lazy, Suspense } from "react";
-import { getPriceChangePercentage } from "../helpers/getPriceChangePercentages";
 import { MarkerFilterContext } from "../../../providers/MarkerFilterProvider";
+import { getPriceChangePercentage } from "../helpers/getPriceChangePercentages";
 
 const GoogleMapMarker = lazy(() =>
   import("@react-google-maps/api").then((module) => ({

@@ -1,13 +1,12 @@
-.home-right {
+.rentals {
   height: 90vh;
-}
-
-.RentList {
+  width: 30vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #f2f3ef;
-  height: 100%;
+  overflow-y: scroll;
+  float: right;
 }
 
 .slider-container {
@@ -52,6 +51,7 @@
 .home-right-property-table-top tbody tr td {
   color: #2d3138;
   width: 9vw;
+  text-align: center !important;
 }
 
 .home-right-property-table-bottom thead tr th {
@@ -62,12 +62,13 @@
 .home-right-property-table-bottom tbody tr td {
   color: #2d3138;
   width: 9vw;
+  text-align: center !important;
 }
 
 .p-panel-header {
   background-color: #efb730 !important;
   border: none !important;
-  width: 27vw;
+  width: 30vw;
 }
 
 .p-panel-title {

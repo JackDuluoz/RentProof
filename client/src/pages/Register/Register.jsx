@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
-import { DataBaseContext } from "../../providers/DataBaseProvider";
 import axios from "axios";
-import { ReactSession } from 'react-client-session';
 import { useHistory } from "react-router-dom";
+import { ReactSession } from 'react-client-session';
+import { DataBaseContext } from "../../providers/DataBaseProvider";
 import './Register.scss'
 
 const Register = () => {

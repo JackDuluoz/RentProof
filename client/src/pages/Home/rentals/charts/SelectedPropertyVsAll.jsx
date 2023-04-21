@@ -173,7 +173,6 @@ const RentIncreaseChart = (props) => {
           <p className="label tooltip-text">{`Year: ${label}`}</p>
           <p className="tooltip-text blue">{`Actual price: $${payload[0].value}`}</p>
           <p className="tooltip-text red">{`Market-adjusted price: $${payload[1].value}`}</p>
-          {console.log("load", payload)}
         </div>
       );
     }
