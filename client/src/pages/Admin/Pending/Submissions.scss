@@ -35,11 +35,17 @@
 
   .p-datatable-thead tr th {
     display: flex;
-    flex-grow: 0.1;
-    justify-content: center;
-    align-items: center;
     text-align: center;
+    justify-content: center;
+    flex-grow: 0.1;
+    align-items: center;
     width: 100px ;
+    background: none !important;
+
+    .p-column-header-content {
+      background: none !important;
+    }
+
   }
 
   .p-datatable-tbody tr {
@@ -51,11 +57,12 @@
 
   .p-datatable-tbody tr td {
     display: flex;
-    flex-grow: 0.1;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-grow: 0.1;
     text-align: center;
     width: 100px ;
+    background: none !important;
   }
 
 }

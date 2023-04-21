@@ -17,3 +17,16 @@
   overflow-y: scroll;
   float: right;
 }
+
+.find, .update {
+  width: 100vw;
+  height: 90vh;
+  background-image: url("../public/background-create.jpg");;
+  background-blend-mode: multiply;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}

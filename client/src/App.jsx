@@ -11,9 +11,11 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import Login from "./pages/Login/Login";
 import Map from "./pages/Home/map/Map";
 import Pending from "./pages/Admin/Pending/Pending";
-import PropertyList from "./pages/Create/Find/CreatePropertyList";
+import PropertyList from "./pages/Create/Find/FindProperty";
 import Register from "./pages/Register/Register";
 import Rentals from "./pages/Home/rentals/Rentals";
+import "primereact/resources/themes/lara-light-indigo/theme.css";
+import "primereact/resources/primereact.min.css";
 import "./App.scss";
 
 function App() {
@@ -48,25 +50,15 @@ function App() {
             </Route>
               
             <Route exact path="/create/update">
-              <div className="create-background" >
-              <div className="create-body">
-                <div className="create-forms">
-                  <AddPrice />
-                </div>
-                </div>
+              <div className="update" >
+                <AddPrice />
               </div>  
             </Route>
               
             <Route exact path="/create/property">
-              <div className="create-background">
-                <div className="add-property-body">
-                  <div className="all-properties">
-                    <PropertyList />
-                  </div>
-                  <div className="add-property">
-                    <AddProperty />
-                  </div>
-                </div>
+              <div className="find">
+                <PropertyList />
+                <AddProperty />
               </div>              
             </Route>
               

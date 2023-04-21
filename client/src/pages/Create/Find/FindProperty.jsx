@@ -1,17 +1,15 @@
 import React, { useContext, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { DataBaseContext } from "../../../providers/DataBaseProvider";
 import { PropertyIdContext } from "../../../providers/PropertyIdProvider";
-import { DataTable } from "primereact/datatable";
+import { Button } from "primereact/button";
 import { Column } from "primereact/column";
-import "primereact/resources/themes/lara-light-indigo/theme.css";
-import "primereact/resources/primereact.min.css";
+import { DataTable } from "primereact/datatable";
 import { FilterMatchMode } from "primereact/api";
 import { InputText } from "primereact/inputtext";
-import { Button } from "primereact/button";
-import { useHistory } from "react-router-dom";
-import "./CreatePropertyList.scss";
+import "./FindProperty.scss";
 
-export default function PropertyList() {
+export default function FindProperty() {
 
   const { properties } = useContext(DataBaseContext);
   const { setUpdateId } = useContext(PropertyIdContext);
@@ -37,35 +35,37 @@ export default function PropertyList() {
         province: property.province,
         update: (
           <Button
-            label="Update"
+            label="New Price"
             className="p-button-primary"
             onClick={() => update(property.id)}
           />
         ),
       };
     }));
+  
+  const header = (
+    <div className="find-header">
+      <div className="title">
+        Find Property
+      </div>
+      <InputText
+      placeholder="Search"
+      onInput={(e) =>
+        setFilters({
+          global: { value: e.target.value, matchMode: FilterMatchMode.CONTAINS }
+      })}
+      />
+    </div>
+  );
 
   return (
-    <div>
-      <InputText
-        placeholder="Search"
-        onInput={(e) =>
-          setFilters({
-            global: {
-              value: e.target.value,
-              matchMode: FilterMatchMode.CONTAINS,
-            },
-          })
-        }
-      />
+    <div className="find-table">
       <DataTable
         value={tableProperties}
-        header="Find Your Property"
+        header={header}
         sortMode="multiple"
         filters={filters}
-        paginator
-        rows={5}
-        rowsPerPageOptions={[1,2,3,4,5]}
+        scrollable scrollHeight="650px"
       >
         <Column sortable field="id" header="Id" />
         <Column sortable field="address" header="Address" />

@@ -1,14 +1,14 @@
 import React, { useState, useContext } from "react";
-import { DataBaseContext } from "../../../providers/DataBaseProvider";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { ReactSession } from "react-client-session";
+import { DataBaseContext } from "../../../providers/DataBaseProvider";
 import { PropertyIdContext } from "../../../providers/PropertyIdProvider";
-import "./AddPrice.scss";
-import PhotoUpload from "./PhotoUpload";
-import PhotoList from "./PhotoList";
-import DocumentUpload from "./DocumentUpload";
 import DocumentList from "./DocumentList";
+import DocumentUpload from "./DocumentUpload";
+import PhotoList from "./PhotoList";
+import PhotoUpload from "./PhotoUpload";
+import "./AddPrice.scss";
 
 const AddPrice = () => {
 
@@ -77,7 +77,7 @@ const AddPrice = () => {
 
   return (
     <div className="wrapper-price">
-      <div className="title">Update Your Price</div>
+      <div className="title">Update Price</div>
       <div className="form">
         <div className="price-data">
           <div className="price-data-primary">

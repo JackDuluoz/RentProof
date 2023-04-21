@@ -1,161 +1,83 @@
-.wrapper-price{
-  width: 100%;
-  background-color: rgba(255, 255, 255, .92);
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+.wrapper-price {
+  background-color: rgba(255, 255, 255, .7);
   padding: 30px;
-  border: 2px solid #61dafb;
-  border-radius: 20px;
-  height: 80vh;
+  border-radius: 12px;
+  color: #030305;
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .form {
+    width: 100%;
+
+    .price-data {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5em;
+    }
+
+    .inputfield {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+
+      label {
+        width: 200px;
+        margin-right: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      .input {
+        width: 100%;
+        outline: none;
+        border: 1px solid #d5dbd9;
+        font-size: 15px;
+        padding: 6px 10px;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+
+        &:focus {
+          border: 1px solid #efb730;
+        }
+      }
+
+      .btn {
+        width: 80%;
+        margin-left: 10%;
+        padding: 8px 10px;
+        font-size: 1.2rem; 
+        border: 0px;
+        background: #efb730;
+        cursor: pointer;
+        border-radius: 3px;
+        outline: none;
+
+        &:hover {
+          background-color: rgba(239,183,48,0.8);
+          transform: scale(1.01);
+        }
+      }
+    }
+  }
+
+  .upload-row {
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    gap: 1em;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
 
-.wrapper-price .title{
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 25px;
-  color: #5AB8F8;
-  text-align: center;
-}
-
-.wrapper-price .form{
-  width: 100%;
-}
-
-.wrapper-price .form .inputfield{
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-}
-
-.wrapper-price .form .inputfield label{
-  width: 200px;
-  color: #757575;
-  margin-right: 10px;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.wrapper-price .form .inputfield .input {
-  width: 100%;
-  outline: none;
-  border: 1px solid #d5dbd9;
-  font-size: 15px;
-  padding: 6px 10px;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-
-.wrapper-price .form .inputfield .custom_select{
-  position: relative;
-  width: 100%;
-  height: 37px;
-}
-
-.wrapper-price .form .inputfield .custom_select:before{
-  content: "";
-  position: absolute;
-  top: 12px;
-  right: 10px;
-  border: 8px solid;
-  border-color: #d5dbd9 transparent transparent transparent;
-  pointer-events: none;
-}
-
-.wrapper-price .form .inputfield .custom_select select{
-  -webkit-appearance: none;
-  -moz-appearance:   none;
-  appearance:        none;
-  outline: none;
-  width: 100%;
-  height: 100%;
-  border: 0px;
-  padding: 6px 10px;
-  font-size: 15px;
-  border: 1px solid #d5dbd9;
-  border-radius: 3px;
-}
 
 
-.wrapper-price .form .inputfield .input:focus,
-.wrapper-price .form .inputfield .custom_select select:focus{
-  border: 1px solid #61dafb;
-}
 
-.wrapper-price .form .inputfield p{
-   font-size: 14px;
-   color: #757575;
-}
-.wrapper-price .form .inputfield .check{
-  width: 15px;
-  height: 15px;
-  position: relative;
-  display: block;
-  cursor: pointer;
-}
-.wrapper-price .form .inputfield .check input[type="checkbox"]{
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-.wrapper-price .form .inputfield .check .checkmark{
-  width: 15px;
-  height: 15px;
-  border: 1px solid #5AB8F8;
-  display: block;
-  position: relative;
-}
-.wrapper-price .form .inputfield .check .checkmark:before{
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 2px;
-  width: 5px;
-  height: 2px;
-  border: 2px solid;
-  border-color: transparent transparent #fff #fff;
-  transform: rotate(-45deg);
-  display: none;
-}
-.wrapper-price .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
-  background: #5AB8F8;
-}
 
-.wrapper-price .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
-  display: block;
-}
 
-.wrapper-price .form .inputfield .btn{
-  width: 80%;
-  margin-left: 10%;
-  padding: 8px 10px;
-  font-size: 1.2rem; 
-  border: 0px;
-  background: #5AB8F8;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 3px;
-  outline: none;
-}
 
-.wrapper-price .form .inputfield .btn:hover{
-  background: RoyalBlue;
-}
-
-.wrapper-property .form .inputfield:last-child{
-  margin-bottom: 0;
-}
-
-.price-data {
-  display: flex;
-  flex-direction: row;
-  gap: 1.5em;
-}
-
-.upload-row {
-  display: flex;
-  flex-direction: row;
-  height: 300px;
-  gap: 1em;
-  justify-content: space-evenly;
-  align-items: center;
-}

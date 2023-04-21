@@ -1,70 +1,69 @@
 .file-card {
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 3px dashed #cbd5e0;
-    background-color: #edf2f7;
-    width: 380px;
-    height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  background-color: #edf2f7;
+  border: 3px dashed #cbd5e0;
+  width: 380px;
+  height: 150px;
 
-    .file-inputs {
-        position: relative;
+  .file-inputs {
+    position: relative;
 
-        input {
-            position: relative;
-            text-align: right;
-            opacity: 0;
-            z-index: 2;
-            cursor: pointer;
-            height: 46px;
-            max-width: 200px;
-        }
-
-        button {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            color: #fff;
-            background-color: #5AB8F8;
-            font-size: 1.1rem;
-            cursor: pointer;
-            border-radius: 4px;
-            border: none;
-            outline: none;
-            // padding: 1em;
-            transition: background-color 0.4s;
-            box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.5);
-
-            i {
-                width: 1.5em;
-                height: 1.5em;
-                padding: 0.4em;
-                background-color: #fff;
-                color: #5AB8F8;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-right: 0.8em;
-                font-size: 0.8em;
-            }
-        }
-
-        &:hover {
-            button {
-                background-color: RoyalBlue;
-            }
-        }
+    input {
+      position: relative;
+      text-align: right;
+      opacity: 0;
+      z-index: 2;
+      cursor: pointer;
+      height: 46px;
+      max-width: 200px;
     }
+
+    button {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #030305;
+      background: #efb730;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border-radius: 4px;
+      border: none;
+      outline: none;
+      transition: background-color 0.4s;
+      box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.5);
+      
+      i {
+        width: 1.5em;
+        height: 1.5em;
+        padding: 0.4em;
+        background-color: rgba(255,255,255,0.5);
+        color: #030305;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0.8em;
+        font-size: 0.8em;
+      }
+    }
+
+    &:hover {
+      button {
+        background-color: rgba(239,183,48,0.8);
+        transform: scale(1.01);
+      }
+    }
+  }
 }
 
 .main {

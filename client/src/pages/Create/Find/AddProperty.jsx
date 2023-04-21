@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import { DataBaseContext } from "../../../providers/DataBaseProvider";
 import axios from "axios";
+import { DataBaseContext } from "../../../providers/DataBaseProvider";
 import './AddProperty.scss'
 
 const AddProperty = () => {
@@ -61,7 +61,7 @@ const AddProperty = () => {
   return (
      <div className="wrapper-property">
       <div className="title">
-        Add Your Property
+        Add Property
       </div>
       <div className="form">
         <div className="inputfield">

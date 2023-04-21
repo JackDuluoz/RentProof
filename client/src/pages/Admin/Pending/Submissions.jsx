@@ -82,7 +82,7 @@ export default function Submissions() {
     .reverse()  
   )
 
- const header = (
+  const header = (
     <div className="submissions-header">
       <InputText
       placeholder="Search"
