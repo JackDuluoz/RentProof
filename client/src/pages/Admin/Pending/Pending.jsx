@@ -1,5 +1,5 @@
 import React from "react";
-import '../Admin.scss'
+import './Pending.scss'
 import { ReactSession } from 'react-client-session';
 import { useHistory } from "react-router-dom";
 import Submissions from "./Submissions";

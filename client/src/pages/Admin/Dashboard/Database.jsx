@@ -105,7 +105,8 @@ export default function Database() {
     return (
       <div className="property-prices">
         <h5>Price history for {data.id}</h5>
-        <DataTable value={data.propertyPrices.reverse()}
+        <DataTable
+          value={data.propertyPrices.reverse()}
           responsiveLayout="scroll"
           paginator
           rows={6}

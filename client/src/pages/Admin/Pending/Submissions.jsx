@@ -3,8 +3,6 @@ import { DataBaseContext } from "../../../providers/DataBaseProvider";
 import axios from "axios"
 import { DataTable } from "primereact/datatable"
 import { Column } from "primereact/column"
-import "primereact/resources/themes/lara-light-indigo/theme.css"
-import "primereact/resources/primereact.min.css"
 import { FilterMatchMode } from "primereact/api"
 import { InputText } from "primereact/inputtext"
 import { Button } from "primereact/button"
@@ -77,26 +75,34 @@ export default function Submissions() {
                         <button type="submit" className="btn" id="document-btn"><i className="fa fa-folder"></i>Document</button>
                       </form>,
       user: getUserByPriceId(submission).name,
-      status: submission.admin_status,
       approve: <Button label="Approve" className="p-button-success" onClick={() => handleApprove(submission.id)} />,
       reject: <Button label="Reject" className="p-button-danger" onClick={() => handleReject(submission.id)} />
     }  
   })
     .reverse()  
   )
-  return (
-    <div className="submission-table">
+
+ const header = (
+    <div className="submissions-header">
       <InputText
-        placeholder="Search"
-        onInput={(e) =>
-          setFilters({
-            global: { value: e.target.value, matchMode: FilterMatchMode.CONTAINS }
-        })}
+      placeholder="Search"
+      onInput={(e) =>
+        setFilters({
+          global: { value: e.target.value, matchMode: FilterMatchMode.CONTAINS }
+      })}
       />
-      <DataTable value={pendingList} header="Pending Prices" sortMode="multiple" filters={filters}
-        paginator
-        rows={3}
-        rowsPerPageOptions={[1,2,3]}
+    </div>
+  );
+
+  return (
+    <div className="submissions-table">      
+      <DataTable
+        value={pendingList}
+        header={header}
+        sortMode="multiple"
+        filters={filters}
+        responsiveLayout="scroll"
+        scrollable scrollHeight="650px"
       >
         <Column field="photo" header="Photo" />
         <Column sortable field="id" header="Id" />
@@ -106,13 +112,9 @@ export default function Submissions() {
         <Column sortable field="price" header="Price" />
         <Column field="documentation" header="Documentation" />
         <Column sortable field="user" header="User" />
-        <Column className="status" field="status" header="Status" />
         <Column field="approve" header="Approve" />
         <Column field="reject" header="Reject" />
       </DataTable>
     </div>
   );
 }
-
-
-
