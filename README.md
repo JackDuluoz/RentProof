@@ -1,112 +1,73 @@
-## RentProof
+# RentProof
 
-RentProof tracks and analyses rental prices. Users can submit info about their rent costs, and the app tracks this data, graphing out rental increases over the years, and showing how each property's price fluctuations compare to the rest of the market.
+**RentProof is a rent accountability app that tracks user-supplied market data.**
 
-## Examples
+The idea behind this project is that unbiased members of the public will contribute their rental price data to the app so that a detailed history of rental prices can be established for indivdual properties and regional markets. This empowers renters by providing them with a single repository for rental price data so they can quickly identify high-performing from low-performing properties over time.   
 
-### Main Page
+## Project Screenshots
 
-![averages-filters](https://user-images.githubusercontent.com/114964214/219803273-82b17612-df77-457b-8ff4-84e6411a84ce.gif)
+### Home Page
 
-### Color-Coded Pins
+![Home](./server/assets/home-page.gif)
 
-![pin-color](https://user-images.githubusercontent.com/114964214/219803406-846513ee-60bf-4f69-ae85-7c1c1b0a4be1.gif)
+### Colour Coded Markers
 
+![Markers](./server/assets/markers.gif)
 
-### Property View
+### Add Price
 
-![selected-property](https://user-images.githubusercontent.com/114964214/219803343-a6fc91a7-ff3f-456e-959f-dcf60b886304.gif)
+![Add](./server/assets/add.gif)
 
+### Admin Approval
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////
+![Admin](./server/assets/approve.gif)
 
-## Getting Started
+## Tech Stack
 
-To get started with RentProof, you'll need to install both the client and server dependencies. Here's how:
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![PostgreSQL](https://img.shields.io/badge/postgresql-%2300f.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+![Google Maps API](https://img.shields.io/badge/google_maps_api-4285F4?style=for-the-badge&logo=google&logoColor=white)
 
-Clone the RentProof repository from GitHub:
-git clone https://github.com//jamesraymondbrown/rent-tracker
+## Installation
 
-Install the server dependencies:
-cd rent-proof/server
-npm install
+1. Clone this repository.
+```$ git clone https://github.com/JackDuluoz/RentProof```
 
-Install the client dependencies:
-cd ../client
-npm install
+2. Run `npm install` from the root directory of the project.
 
-Start the server:
-cd ../server
-npm run start
+3. Run `npm install` from inside the client directory.
 
-Start the client:
-cd ../client
-npm run start
+```bash
+$ cd RentProof
+$ npm install
+$ cd client
+$ npm install
+```
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////
+4. Set environment variables.
 
-## Server Scripts
+  Create a `.env` file in the client directory and insert your own placeholder values.
 
-start: Starts the server
-reset: Resets the database to its initial state (run this only in development mode)
-run dev: Starts the server in development mode using nodemon
+```bash
+REACT_APP_GOOGLE_MAPS_API_KEY=<GOOGLE API KEY>
+```
 
-## Dependencies
+5. Start the back end from the root directory of the project.
+`$ npm run dev`
 
-Server:
+6. Start the front ent from inside the client directory.
+`$ npm start`
 
-- @googlemaps/markerclusterer@2.0.15
-- body-parser@1.18.3
-- cors@2.8.5
-- dotenv@7.0.0
-- eslint@8.7.0
-- express@4.16.4
-- express-fileupload@1.4.0
-- helmet@3.18.0
-- morgan@1.10.0
-- nodemon@2.0.20
-- pg@8.8.0
-- prettier@2.5.1
-- react-dual-range-slider@1.0.4
-- react-js-multi-range-sliders@0.1.6
-- react-lazyload@3.2.0
-- react-loader-spinner@5.3.4
+## Author
 
-Client:
+Michael Green [@michaelgreen](https://github.com/JackDuluoz)
 
-- @fortawesome/fontawesome-svg-core@6.3.0
-- @fortawesome/free-solid-svg-icons@6.3.0
-- @fortawesome/react-fontawesome@0.2.0
-- @google/markerclustererplus@5.1.3
-- @googlemaps/markerclusterer@2.0.15
-- @react-google-maps/api@2.7.0
-- @testing-library/jest-dom@5.16.5
-- @testing-library/react@12.1.5
-- @testing-library/user-event@13.5.0
-- axios@1.1.3
-- dotenv@7.0.0
-- eslint@8.7.0
-- fetch@1.1.0
-- node-fetch@3.3.0
-- prettier@2.5.1
-- primeicons@6.0.1
-- primereact@9.0.0-beta.1
-- react@17.0.2
-- react-client-session@0.0.8
-- react-dom@17.0.2
-- react-router-dom@5.2.0
-- react-scripts@5.0.1
-- recharts@2.4.0
-- web-vitals@2.1.4
-- sass@1.58.0
+## Acknowledgements
 
-## Scripts
-
-- start: Starts the client
-- build: Builds the client for production
-- test: Runs the client's test suite
-- eject: Ejects the client from react-scripts
-
-## Proxy
-
-The client is configured to proxy API requests to the server at http://localhost:8001.
+Built with [James Brown](https://github.com/jamesraymondbrown) and [Hadley Sutherland](https://github.com/Vuvvy1). We had a lot of fun putting this together!
