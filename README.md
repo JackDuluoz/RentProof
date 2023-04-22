@@ -71,7 +71,7 @@ REACT_APP_GOOGLE_MAPS_API_KEY=<GOOGLE API KEY>
 6. Start the back end from the root directory of the project.
 `$ npm run dev`
 
-7. Start the front ent from inside the client directory.
+7. Start the front end from inside the client directory.
 `$ npm start`
 
 ## Author
