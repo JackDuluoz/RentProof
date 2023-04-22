@@ -2,7 +2,7 @@
 
 **RentProof is a rent accountability app that tracks user-supplied market data.**
 
-The idea behind the project is for unbiased members of the public to contribute rental price data so that a detailed history of rental prices can be established for indivdual properties and regional markets. This empowers renters by providing them with a single repository for rental price data so they can quickly identify high-performing from low-performing properties over time. In the spirit of the app, RentProof is designed as a not-for-profit service that could be pitched to interested agencies in the public sector.     
+The idea behind the project is for unbiased members of the public to contribute rental price data so that a detailed history of rental prices can be established for individual properties and regional markets. This empowers renters by providing them with a single repository for rental price data so they can quickly identify high-performing from low-performing properties over time. In the spirit of the app, RentProof is designed as a not-for-profit service that could be pitched to interested agencies in the public sector.     
 
 ## Project Screenshots
 
