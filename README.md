@@ -2,7 +2,7 @@
 
 **RentProof is a rent accountability app that tracks user-supplied market data.**
 
-The idea behind this project is that unbiased members of the public will contribute their rental price data to the app so that a detailed history of rental prices can be established for indivdual properties and regional markets. This empowers renters by providing them with a single repository for rental price data so they can quickly identify high-performing from low-performing properties over time.   
+The idea behind the project is for unbiased members of the public to contribute rental price data so that a detailed history of rental prices can be established for indivdual properties and regional markets. This empowers renters by providing them with a single repository for rental price data so they can quickly identify high-performing from low-performing properties over time. In the spirit of the app, RentProof is designed as a not-for-profit service that could be pitched to interested agencies in the public sector.     
 
 ## Project Screenshots
 
@@ -50,18 +50,28 @@ $ cd client
 $ npm install
 ```
 
-4. Set environment variables.
+4. Database
+
+  The database requires `postgreSQL` to be installed on your local machine. The `.env.example` file in the root directory details the credentials used to access the database on our local machines. Create your own psql database, copy the `.env.example` file to `.env`, and fill in your own postgreSQL configuration credentials.
+
+  Install [PostgreSQL](https://www.postgresql.org/download/)
+
+  The database can then be seeded and reset using `npm run reset` in the command line using your chosen password.
+
+5. Set environment variables.
 
   Create a `.env` file in the client directory and insert your own placeholder values.
+
+  Create a [Google API Key](https://developers.google.com/maps/documentation/javascript/get-api-key)
 
 ```bash
 REACT_APP_GOOGLE_MAPS_API_KEY=<GOOGLE API KEY>
 ```
 
-5. Start the back end from the root directory of the project.
+6. Start the back end from the root directory of the project.
 `$ npm run dev`
 
-6. Start the front ent from inside the client directory.
+7. Start the front ent from inside the client directory.
 `$ npm start`
 
 ## Author
