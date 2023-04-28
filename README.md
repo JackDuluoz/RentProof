@@ -80,4 +80,4 @@ Michael Green [@michaelgreen](https://github.com/JackDuluoz)
 
 ## Acknowledgements
 
-Built with [James Brown](https://github.com/jamesraymondbrown) and [Hadley Sutherland](https://github.com/Vuvvy1). We had a lot of fun putting this together!
+Built with [James Brown](https://github.com/jamesraymondbrown) and [Hadley Sutherland](https://github.com/Vuvvy1). We had a lot of fun putting this together. Thanks guys!

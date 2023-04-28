@@ -1,4 +1,17 @@
 
+.find, .update {
+  width: 100vw;
+  height: 90vh;
+  background-image: url("../../../../public/background-create.jpg");;
+  background-blend-mode: multiply;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .find-table .p-datatable * :not(.p-button-primary, .p-button-label) {
   background-color: rgba(255,255,255,0.4) !important;
   color: #030305;

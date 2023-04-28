@@ -32,8 +32,7 @@ function App() {
             <Header />
           </div>
         <div className="content">
-          <Switch>
-              
+          <Switch>              
             <Route exact path="/">
               <Map />
               <Rentals />
