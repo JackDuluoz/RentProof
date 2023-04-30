@@ -11,7 +11,7 @@ export default function BedFilter() {
     <div className="filter-container">
       <div className="filter-row">
         <div className="filter-right">
-          <div className="filter-label">Bedrooms</div>
+          <div className="filter-label">Beds</div>
           <div className="filter-wrap">
             <div className="filter">
               <div className="row filter-bedrooms">

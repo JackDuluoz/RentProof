@@ -6,6 +6,10 @@ The idea behind the project is for unbiased members of the public to contribute 
 
 ## Project Screenshots
 
+### Responsive Design
+
+![Responsive](./server/assets/responsive.png)
+
 ### Home Page
 
 ![Home](./server/assets/home-page.gif)

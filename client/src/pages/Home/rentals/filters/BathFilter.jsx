@@ -13,7 +13,7 @@ export default function BathFilter() {
     <div className="filter-container">
       <div className="filter-row">
         <div className="filter-right">
-          <div className="filter-label">Bathrooms</div>
+          <div className="filter-label">Baths</div>
           <div className="filter-wrap">
             <div className="filter">
               <div className="row filter-bathrooms">

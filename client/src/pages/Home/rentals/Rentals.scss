@@ -6,7 +6,6 @@
   align-items: center;
   background-color: #f2f3ef;
   overflow-y: scroll;
-  float: right;
 }
 
 .slider-container {
@@ -32,6 +31,7 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   font-size: 0.85em;
+  background-color: #f2f3ef;
 }
 
 .home-right-property-table-bottom {
@@ -41,6 +41,7 @@
   border-bottom-left-radius: 5px;
   border-bottom-left-radius: 5px;
   font-size: 0.85em;
+  background-color: #f2f3ef;
 }
 
 .home-right-property-table-top thead tr th {
@@ -82,6 +83,7 @@
 
 .p-panel-content {
   background-color: #f2f3ef !important;
+  padding: 0px 5px !important;
 }
 
 .selected-property-charts {
@@ -89,18 +91,14 @@
 }
 
 .image {
-  width: 400px;
-  height: 300px;
+  width: 100%;
+  height: auto;
+  padding: 0px 10px;
   border-radius: 5%;
-  border-color: blanchedalmond;
-  transition: all 0.3s ease-in-out;
+}
 
-  &.focus {
-    transform: translate(-50%, -50%) scale(2);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-  }
+.info {
+  background-color: #f2f3ef !important;
 }
 
 .price {
@@ -110,10 +108,32 @@
   font-weight: 200;
   letter-spacing: 1.04px;
   overflow-wrap: break-word;
+  background-color: #f2f3ef;
 }
 
 .p-panel-title {
   color: white;
   font-size: 16pt;
   text-align: center;
+}
+
+@media only screen and (max-width: 960px) {
+
+  .rentals {
+    width: 100vw;
+    overflow-y:visible
+  }
+
+  .p-panel-header {
+    width: 100vw;
+  }
+
+  .home-right-property-table-top {
+    width: 100%;
+  }
+
+  .home-right-property-table-bottom {
+    width: 100%;
+  }
+
 }
